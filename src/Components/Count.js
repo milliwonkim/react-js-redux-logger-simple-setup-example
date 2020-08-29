@@ -4,7 +4,7 @@ import { DECREASE, RESET, INCREASE } from '../Actions/actionTypes';
 
 export const Count = ({ increase, decrease, reset, count, name }) => {
     return (
-        <div class='count'>
+        <div className='count'>
             <div>
                 <h1>{count}</h1>
                 <h2>{name}</h2>

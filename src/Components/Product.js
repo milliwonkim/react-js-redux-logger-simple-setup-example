@@ -16,7 +16,7 @@ export const Product = ({ loading, products, getProduct }) => {
                     <h1>OUR PRODUCT</h1>
                     <ul>
                         {products.map((item) => {
-                            return <li key={item}>{item.title}</li>;
+                            return <li key={item.title}>{item.title}</li>;
                         })}
                     </ul>
                 </section>

@@ -10,13 +10,16 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 
 import countReducer from './Reducers/countReducer';
 import productReducer from './Reducers/productReducer';
+import { createLogger } from 'redux-logger';
+
+const logger = createLogger();
 
 const store = createStore(
     combineReducers({
         countState: countReducer,
         productState: productReducer,
     }),
-    composeWithDevTools(applyMiddleware(thunk))
+    composeWithDevTools(applyMiddleware(logger, thunk))
 );
 
 ReactDOM.render(
